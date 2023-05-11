@@ -1,0 +1,64 @@
+@import "../../../styles/variables.scss";
+
+.Container {
+  height: 9rem;
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: $color-light;
+  position: sticky;
+  top: 0;
+  z-index: 11;
+  transition: 300ms ease;
+
+  @media screen and (max-width: 600px) {
+    padding: 1rem 0.5rem;
+  }
+
+  &.Active {
+    box-shadow: 0 0 10px $color-dark;
+  }
+
+  nav {
+    position: relative;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    div {
+      display: flex;
+      gap: 2rem;
+      font-size: 2.5rem;
+
+      @media screen and (max-width: 600px) {
+        display: none;
+        pointer-events: none;
+        margin-right: auto;
+      }
+    }
+  }
+
+  svg {
+    color: $color-gray-2;
+    cursor: pointer;
+
+    &:hover,
+    &:active {
+      color: darken($color-yellow, 20%);
+    }
+  }
+}
+
+.CTA {
+  color: $color-dark;
+  padding: 0.3rem 2rem;
+  border-radius: 2rem;
+  border: 0.3rem solid $color-yellow;
+  align-self: center;
+
+  @media screen and (max-width: 600px) {
+    margin-left: -15rem;
+    padding: 0.3rem 0.6rem;
+  }
+}

@@ -1,0 +1,16 @@
+.Container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 1.2rem;
+  line-height: 0.5;
+
+  label,
+  input {
+    cursor: pointer;
+  }
+
+  .Active {
+    color: gray;
+  }
+}
